@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kesiapan Karier | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/readiness.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="readiness-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="results.html" class="back-link">← Kesenjangan Keahlian</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="readiness-main">
+    <div class="container readiness-container">
+      <div class="readiness-heading">
+        <div>
+          <p class="section-label">RINGKASAN KESIAPAN KARIER</p>
+          <h1>Lihat gambaran besarnya.</h1>
+          <p>
+            Lihat beberapa indikator untuk memahami kesiapan
+            kariermu saat ini.
+          </p>
+        </div>
+
+        <div class="readiness-target">
+          <span>TARGET KARIER</span>
+          <strong id="readinessCareer">Memuat...</strong>
+        </div>
+      </div>
+
+      <section class="indicator-grid">
+        <article class="indicator-card">
+          <div class="indicator-top">
+            <span class="indicator-number">01</span>
+            <span class="indicator-label">ARAH</span>
+          </div>
+
+          <h2>Kejelasan Karier</h2>
+          <strong class="indicator-status" id="clarityStatus">Memeriksa...</strong>
+          <p id="clarityDescription">Memeriksa arah karier pilihanmu.</p>
+        </article>
+
+        <article class="indicator-card">
+          <div class="indicator-top">
+            <span class="indicator-number">02</span>
+            <span class="indicator-label">KOMPETENSI</span>
+          </div>
+
+          <h2>Kesesuaian Keahlian</h2>
+          <strong class="indicator-status" id="readinessAlignment">0%</strong>
+          <p>Kecocokan kemampuanmu dengan kebutuhan karier.</p>
+        </article>
+
+        <article class="indicator-card">
+          <div class="indicator-top">
+            <span class="indicator-number">03</span>
+            <span class="indicator-label">BUKTI</span>
+          </div>
+
+          <h2>Cakupan Referensi Bukti</h2>
+          <strong class="indicator-status" id="evidenceStatus">Memeriksa...</strong>
+          <p id="evidenceDescription">Menghitung keahlian yang memiliki referensi.</p>
+        </article>
+
+        <article class="indicator-card">
+          <div class="indicator-top">
+            <span class="indicator-number">04</span>
+            <span class="indicator-label">ADAPTABILITAS</span>
+          </div>
+
+          <h2>Adaptabilitas Karier</h2>
+          <strong class="indicator-status" id="adaptabilityStatus">
+            Belum diperiksa
+          </strong>
+          <p id="adaptabilityDescription">
+            Selesaikan refleksi singkat di bawah.
+          </p>
+        </article>
+      </section>
+
+      <div class="readiness-note">
+        <strong>Indikator ini bukan prediksi diterima kerja.</strong>
+        <p>Hasilnya digunakan untuk membantu menyusun persiapan karier.</p>
+      </div>
+
+      <section class="adaptability-section">
+        <div class="adaptability-heading">
+          <p class="section-label">REFLEKSI ADAPTABILITAS KARIER</p>
+          <h2>Bagaimana kamu mempersiapkan masa depanmu?</h2>
+          <p>
+            Jawab dua pernyataan pada setiap dimensi. Refleksi ini membantu
+            menyusun rencana, bukan tes psikologis atau penentu diterima kerja.
+          </p>
+          <p class="reflection-disclaimer">
+            Delapan pernyataan ini disusun Pathly dengan inspirasi dari empat
+            dimensi career adaptability. Ini bukan instrumen CAAS 24 item dan
+            belum divalidasi secara psikometrik.
+          </p>
+        </div>
+
+        <form id="adaptabilityForm" novalidate>
+          <div class="form-message" id="adaptabilityMessage" aria-live="polite"></div>
+
+          <div class="adaptability-question">
+            <div class="dimension-info">
+              <span>PERHATIAN</span>
+              <h3>Seberapa jauh kamu memikirkan dan menyiapkan masa depan?</h3>
+            </div>
+
+            <div class="reflection-items">
+              <fieldset class="reflection-item">
+                <legend>Saya memiliki gambaran tujuan karier 6–12 bulan ke depan.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="concernPlan" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="concernPlan" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="concernPlan" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="concernPlan" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="reflection-item">
+                <legend>Saya sudah menentukan tindakan yang perlu dilakukan dalam waktu dekat.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="concernAction" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="concernAction" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="concernAction" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="concernAction" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="adaptability-question">
+            <div class="dimension-info">
+              <span>KENDALI</span>
+              <h3>Seberapa aktif kamu mengarahkan keputusan dan tindakanmu?</h3>
+            </div>
+
+            <div class="reflection-items">
+              <fieldset class="reflection-item">
+                <legend>Saya membuat keputusan karier berdasarkan pertimbangan saya sendiri.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="controlDecision" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="controlDecision" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="controlDecision" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="controlDecision" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="reflection-item">
+                <legend>Saya tetap melakukan langkah kecil meskipun belum merasa sepenuhnya siap.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="controlAction" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="controlAction" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="controlAction" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="controlAction" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="adaptability-question">
+            <div class="dimension-info">
+              <span>RASA INGIN TAHU</span>
+              <h3>Seberapa aktif kamu mencari dan membandingkan kemungkinan?</h3>
+            </div>
+
+            <div class="reflection-items">
+              <fieldset class="reflection-item">
+                <legend>Saya mencari informasi tentang tugas dan kemampuan pada beberapa karier.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="curiosityExplore" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="curiosityExplore" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="curiosityExplore" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="curiosityExplore" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="reflection-item">
+                <legend>Saya membandingkan pilihan sebelum menentukan satu target utama.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="curiosityCompare" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="curiosityCompare" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="curiosityCompare" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="curiosityCompare" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="adaptability-question">
+            <div class="dimension-info">
+              <span>KEPERCAYAAN DIRI</span>
+              <h3>Seberapa yakin kamu dapat belajar dan menghadapi hambatan?</h3>
+            </div>
+
+            <div class="reflection-items">
+              <fieldset class="reflection-item">
+                <legend>Saya yakin dapat mempelajari kemampuan yang belum saya kuasai.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="confidenceLearn" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="confidenceLearn" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="confidenceLearn" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="confidenceLearn" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="reflection-item">
+                <legend>Saat mengalami kesulitan, saya dapat mencari cara lain dan mencoba kembali.</legend>
+                <div class="reflection-options">
+                  <label class="reflection-option"><input type="radio" name="confidenceRecover" value="1" required><span>Belum</span></label>
+                  <label class="reflection-option"><input type="radio" name="confidenceRecover" value="2"><span>Sedikit</span></label>
+                  <label class="reflection-option"><input type="radio" name="confidenceRecover" value="3"><span>Cukup</span></label>
+                  <label class="reflection-option"><input type="radio" name="confidenceRecover" value="4"><span>Sangat Sesuai</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="adaptability-actions">
+            <p class="adaptability-save-state" id="adaptabilitySaveState" aria-live="polite">
+              Jawaban baru tersimpan setelah tombol ditekan.
+            </p>
+            <button type="submit" class="btn btn-primary">
+              Simpan Refleksi <span>→</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="dimension-results" id="dimensionResults">
+        <div class="result-section-heading">
+          <p class="section-label">HASIL REFLEKSIMU</p>
+          <h2>Dimensi adaptabilitas.</h2>
+          <p>Ringkasan berdasarkan jawabanmu saat ini.</p>
+        </div>
+
+        <div class="dimension-grid">
+          <div class="dimension-card">
+            <span>PERHATIAN</span>
+            <strong id="concernResult">-</strong>
+          </div>
+
+          <div class="dimension-card">
+            <span>KENDALI</span>
+            <strong id="controlResult">-</strong>
+          </div>
+
+          <div class="dimension-card">
+            <span>RASA INGIN TAHU</span>
+            <strong id="curiosityResult">-</strong>
+          </div>
+
+          <div class="dimension-card">
+            <span>KEPERCAYAAN DIRI</span>
+            <strong id="confidenceResult">-</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="readiness-actions">
+        <a href="results.html" class="btn btn-secondary">
+          Kembali ke Hasil
+        </a>
+
+        <button type="button" class="btn btn-primary" id="roadmapButton" disabled>
+          Bangun Roadmap Saya <span>→</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/readiness.js"></script>
+</body>
+</html>

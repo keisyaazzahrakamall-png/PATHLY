@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tahap Karier | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="onboarding-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="career-stage-main">
+    <div class="container stage-container">
+      <div class="onboarding-progress">
+        <div class="progress-info">
+          <span>Perjalanan Karier</span>
+          <span>Langkah 2</span>
+        </div>
+
+        <div class="onboarding-progress-track">
+          <div class="onboarding-progress-value stage-progress"></div>
+        </div>
+      </div>
+
+      <div class="stage-heading">
+        <p class="section-label">TAHAP KARIERMU</p>
+
+        <h1 id="stageGreeting">
+          Di tahap mana kamu dalam perjalanan kariermu?
+        </h1>
+
+        <p>
+          Pilih opsi yang paling sesuai dengan situasimu saat ini.
+        </p>
+        <p class="stage-flow-note">
+          Tiga pilihan ini adalah konteks awal. Eksplorasi dan Persiapan sama-sama
+          memilih satu target, sedangkan Validasi membandingkan 2–3 target.
+        </p>
+      </div>
+
+      <form id="careerStageForm" novalidate>
+        <div class="stage-grid">
+          <label class="stage-card">
+            <input type="radio" name="careerStage" value="explore" required>
+
+            <span class="stage-card-content">
+              <span class="stage-icon">?</span>
+              <span class="stage-badge">EKSPLORASI</span>
+
+              <strong>Saya masih mencari tahu.</strong>
+
+              <span class="stage-description">
+                Saya belum memiliki target karier yang jelas dan ingin
+                menemukan pilihan yang sesuai.
+              </span>
+
+              <span class="stage-result">
+                Pathly akan membantumu:
+                <b>menemukan arah karier</b>
+              </span>
+            </span>
+          </label>
+
+          <label class="stage-card">
+            <input type="radio" name="careerStage" value="validate">
+
+            <span class="stage-card-content">
+              <span class="stage-icon">⇄</span>
+              <span class="stage-badge">VALIDASI</span>
+
+              <strong>Saya memiliki beberapa pilihan.</strong>
+
+              <span class="stage-description">
+                Saya ingin membandingkan beberapa karier sebelum
+                menentukan fokus.
+              </span>
+
+              <span class="stage-result">
+                Pathly akan membantumu:
+                <b>membandingkan pilihan karier</b>
+              </span>
+            </span>
+          </label>
+
+          <label class="stage-card">
+            <input type="radio" name="careerStage" value="prepare">
+
+            <span class="stage-card-content">
+              <span class="stage-icon">✓</span>
+              <span class="stage-badge">PERSIAPAN</span>
+
+              <strong>Saya sudah mengetahui target saya.</strong>
+
+              <span class="stage-description">
+                Saya ingin mengetahui keahlian yang perlu dikembangkan
+                untuk mencapai target karier.
+              </span>
+
+              <span class="stage-result">
+                Pathly akan membantumu:
+                <b>mempersiapkan targetmu</b>
+              </span>
+            </span>
+          </label>
+        </div>
+
+        <div class="form-message" id="stageMessage" aria-live="polite"></div>
+
+        <div class="stage-actions">
+          <a href="index.html" class="btn btn-secondary">
+            Kembali
+          </a>
+
+          <button type="submit" class="btn btn-primary">
+            Lanjutkan <span>→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/protected-main.js"></script>
+</body>
+</html>

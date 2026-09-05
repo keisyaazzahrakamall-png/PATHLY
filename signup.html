@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Buat akun Pathly untuk menyimpan asesmen, roadmap, dan progres kariermu."
+    >
+    <title>Daftar Akun | Pathly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/polish.css">
+    <link rel="stylesheet" href="css/visual-upgrade.css">
+  </head>
+  <body class="auth-page">
+    <header class="navbar auth-navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo">Pathly<span>.</span></a>
+        <div class="auth-navbar-actions">
+          <a href="index.html" class="auth-back-link">← Beranda</a>
+          <span>Sudah punya akun?</span>
+          <a href="login.html" class="auth-navbar-link">Masuk</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <div class="container auth-shell">
+        <section class="auth-intro" aria-labelledby="signupTitle">
+          <p class="section-label">MULAI PERJALANANMU</p>
+          <h1 id="signupTitle">Jalur kariermu, tersimpan dalam satu akun.</h1>
+          <p class="auth-intro-copy">
+            Simpan hasil asesmen, lanjutkan roadmap, dan pantau perkembanganmu
+            dari waktu ke waktu.
+          </p>
+
+          <ul class="auth-benefits" aria-label="Manfaat akun Pathly">
+            <li>
+              <span aria-hidden="true">01</span>
+              <div>
+                <strong>Profil yang personal</strong>
+                <p>Rekomendasi disusun berdasarkan pendidikan dan targetmu.</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">02</span>
+              <div>
+                <strong>Progres yang tersimpan</strong>
+                <p>Kembali ke asesmen dan roadmap tanpa memulai dari awal.</p>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">03</span>
+              <div>
+                <strong>Data milikmu</strong>
+                <p>Setiap akun hanya dapat mengakses perjalanan kariernya sendiri.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="auth-card" aria-labelledby="formTitle">
+          <div id="signupFormPanel">
+            <div class="auth-card-heading">
+              <p class="section-label">BUAT AKUN</p>
+              <h2 id="formTitle">Kenali arahmu bersama Pathly.</h2>
+              <p>Isi data berikut untuk memulai.</p>
+            </div>
+
+            <form id="signupForm" class="auth-form" novalidate>
+              <div class="auth-field">
+                <label for="signupName">Nama lengkap</label>
+                <input
+                  type="text"
+                  id="signupName"
+                  name="fullName"
+                  autocomplete="name"
+                  minlength="2"
+                  maxlength="80"
+                  placeholder="Contoh: Keisya Azzahra"
+                  required
+                >
+                <small>Nama ini akan tampil pada profilmu.</small>
+              </div>
+
+              <div class="auth-field">
+                <label for="signupEmail">Email</label>
+                <input
+                  type="email"
+                  id="signupEmail"
+                  name="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  maxlength="254"
+                  placeholder="nama@email.com"
+                  required
+                >
+              </div>
+
+              <div class="auth-field">
+                <label for="signupPassword">Password</label>
+                <div class="password-control">
+                  <input
+                    type="password"
+                    id="signupPassword"
+                    name="password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    placeholder="Minimal 8 karakter"
+                    required
+                  >
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    data-password-toggle="signupPassword"
+                    aria-label="Tampilkan password"
+                    title="Tampilkan password"
+                  ></button>
+                </div>
+                <small>Gunakan minimal 8 karakter, huruf, dan angka.</small>
+              </div>
+
+              <div class="auth-field">
+                <label for="signupPasswordConfirm">Konfirmasi password</label>
+                <div class="password-control">
+                  <input
+                    type="password"
+                    id="signupPasswordConfirm"
+                    name="passwordConfirm"
+                    autocomplete="new-password"
+                    minlength="8"
+                    placeholder="Ketik ulang password"
+                    required
+                  >
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    data-password-toggle="signupPasswordConfirm"
+                    aria-label="Tampilkan konfirmasi password"
+                    title="Tampilkan konfirmasi password"
+                  ></button>
+                </div>
+              </div>
+
+              <label class="auth-consent">
+                <input type="checkbox" id="signupConsent" required>
+                <span>
+                  Saya memahami bahwa data profil dan asesmen digunakan untuk
+                  mempersonalisasi perjalanan karier saya, sesuai
+                  <a href="privacy.html" target="_blank" rel="noopener">ringkasan privasi Pathly</a>.
+                </span>
+              </label>
+
+              <div class="auth-message" id="signupMessage" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary auth-submit" id="signupButton">
+                <span class="button-label">Buat Akun</span>
+                <span class="button-arrow" aria-hidden="true">→</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="auth-success" id="signupSuccess" tabindex="-1" hidden>
+            <span class="auth-success-icon" aria-hidden="true">✓</span>
+            <p class="section-label">AKUN BERHASIL DIBUAT</p>
+            <h2>Periksa emailmu.</h2>
+            <p>
+              Tautan konfirmasi telah dikirim ke
+              <strong id="signupSuccessEmail"></strong>.
+            </p>
+            <p class="auth-success-note">
+              Klik tautan tersebut. Pathly akan menampilkan status verifikasi dan
+              tombol untuk melanjutkan ke profilmu.
+            </p>
+            <a href="login.html" class="btn btn-primary">Masuk ke Pathly</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="js/auth/password-toggle.js"></script>
+    <script type="module" src="js/pages/signup.js"></script>
+  </body>
+</html>

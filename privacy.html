@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ringkasan privasi Pathly: data yang disimpan, tujuan penggunaan, dan pilihan pengguna.">
+    <title>Privasi | Pathly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/privacy.css">
+    <link rel="stylesheet" href="css/polish.css">
+    <link rel="stylesheet" href="css/visual-upgrade.css">
+    <link rel="stylesheet" href="css/session.css">
+  </head>
+
+  <body class="privacy-page">
+    <header class="navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo">Pathly<span>.</span></a>
+        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      </div>
+    </header>
+
+    <main class="privacy-main">
+      <div class="container privacy-container">
+        <header class="privacy-heading">
+          <p class="section-label">PRIVASI PATHLY</p>
+          <h1>Data perjalananmu digunakan seperlunya.</h1>
+          <p>Ringkasan ini menjelaskan perilaku versi MVP Pathly. Terakhir diperbarui 5 September 2026.</p>
+        </header>
+
+        <aside class="privacy-alert">
+          <strong>Jangan unggah atau menuliskan data sensitif.</strong>
+          <p>
+            Untuk referensi bukti, cukup cantumkan tautan portofolio publik atau catatan singkat.
+            Hindari KTP, nomor identitas, dokumen internal, alamat rumah, nilai rahasia, dan berkas
+            yang memuat data orang lain.
+          </p>
+        </aside>
+
+        <section class="privacy-grid" aria-label="Ringkasan pengelolaan data">
+          <article>
+            <span>01</span>
+            <h2>Data yang disimpan</h2>
+            <p>
+              Email dan identitas akun, profil pendidikan, pengalaman yang dipilih, target karier,
+              level keahlian, kategori serta catatan referensi, jawaban refleksi, roadmap, dan progres tugas.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h2>Tujuan penggunaan</h2>
+            <p>
+              Data dipakai untuk menyimpan perjalanan per akun, menghitung kesesuaian keahlian,
+              menyusun prioritas, menampilkan kembali hasil, dan mencatat progres. Pathly tidak
+              memakai referensi bukti untuk menaikkan skor.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h2>Penyimpanan dan akses</h2>
+            <p>
+              Autentikasi dan basis data menggunakan Supabase. Row Level Security membatasi data
+              perjalanan berdasarkan pengguna yang sedang masuk. Browser juga menyimpan cache lokal;
+              cache dibersihkan saat akun berubah atau perjalanan direset.
+            </p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h2>Referensi bukan verifikasi</h2>
+            <p>
+              Pathly hanya mencatat ada atau tidaknya kategori dan catatan referensi. Sistem tidak
+              membuka, memvalidasi, atau menjamin keaslian dokumen maupun tautan yang dicantumkan.
+            </p>
+          </article>
+
+          <article>
+            <span>05</span>
+            <h2>Pilihan pengguna</h2>
+            <p>
+              Menu <strong>Reset Perjalanan</strong> menghapus target, asesmen, refleksi, roadmap,
+              dan progres, tetapi mempertahankan akun serta profil pendidikan. Penghapusan akun penuh
+              belum tersedia secara mandiri pada MVP dan perlu diminta kepada tim Pathly melalui kontak repository.
+            </p>
+          </article>
+
+          <article>
+            <span>06</span>
+            <h2>Batasan MVP</h2>
+            <p>
+              Pathly belum memiliki pemeriksaan dokumen otomatis, analitik perilaku pihak ketiga,
+              atau fitur menjual data pengguna. Kebijakan ini perlu ditinjau kembali sebelum
+              penggunaan publik berskala besar.
+            </p>
+          </article>
+        </section>
+
+        <div class="privacy-actions">
+          <a href="signup.html" class="btn btn-primary">Buat Akun <span>→</span></a>
+          <a href="login.html" class="btn btn-secondary">Sudah Punya Akun</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

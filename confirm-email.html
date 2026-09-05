@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Konfirmasi email akun Pathly.">
+    <title>Konfirmasi Email | Pathly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/polish.css">
+    <link rel="stylesheet" href="css/visual-upgrade.css">
+  </head>
+  <body class="auth-page">
+    <header class="navbar auth-navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo">Pathly<span>.</span></a>
+        <div class="auth-navbar-actions">
+          <a href="index.html" class="auth-back-link">← Beranda</a>
+          <a href="login.html" class="auth-navbar-link">Masuk</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <div class="container auth-shell auth-shell-login">
+        <section class="auth-intro" aria-labelledby="confirmationTitle">
+          <p class="section-label">AKTIVASI AKUN</p>
+          <h1 id="confirmationTitle">Satu langkah sebelum memulai.</h1>
+          <p class="auth-intro-copy">
+            Kami memeriksa tautan verifikasi untuk memastikan email dan akun
+            Pathly milikmu siap digunakan.
+          </p>
+
+          <div class="auth-return-card">
+            <span aria-hidden="true">✓</span>
+            <div>
+              <strong>Setelah terverifikasi</strong>
+              <p>Kamu dapat melengkapi profil dan menyimpan perjalanan kariermu.</p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="auth-card"
+          id="confirmationCard"
+          aria-labelledby="confirmationStateTitle"
+          aria-busy="true"
+        >
+          <div class="auth-success" id="confirmationState" tabindex="-1">
+            <span class="auth-success-icon auth-confirmation-icon" id="confirmationIcon" aria-hidden="true">…</span>
+            <p class="section-label" id="confirmationLabel">MEMVERIFIKASI EMAIL</p>
+            <h2 id="confirmationStateTitle">Tunggu sebentar...</h2>
+            <p id="confirmationDescription">
+              Kami sedang memeriksa tautan konfirmasi dari emailmu.
+            </p>
+            <p class="auth-success-note" id="confirmationEmail" hidden></p>
+
+            <div class="auth-confirmation-actions">
+              <a href="onboarding.html" class="btn btn-primary" id="confirmationPrimary" hidden>
+                Lengkapi Profil <span aria-hidden="true">→</span>
+              </a>
+              <a href="signup.html" class="btn btn-secondary" id="confirmationRetry" hidden>
+                Kembali ke Daftar
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="js/pages/confirm-email.js"></script>
+  </body>
+</html>

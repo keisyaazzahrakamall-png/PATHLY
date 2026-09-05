@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Profil Karier | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="onboarding-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="onboarding-main">
+    <div class="container onboarding-container">
+      <div class="onboarding-progress">
+        <div class="progress-info">
+          <span>Profil Karier</span>
+          <span>Langkah 1</span>
+        </div>
+
+        <div class="onboarding-progress-track">
+          <div class="onboarding-progress-value"></div>
+        </div>
+      </div>
+
+      <div class="onboarding-heading">
+        <p class="section-label" id="profilePageLabel">MARI MULAI DARI DIRIMU</p>
+        <h1 id="profilePageTitle">Bangun profil kariermu.</h1>
+        <p id="profilePageDescription">
+          Ceritakan pendidikan dan pengalamanmu agar Pathly
+          dapat mempersonalisasi jalurmu.
+        </p>
+      </div>
+
+      <form class="profile-form" id="profileForm" novalidate>
+        <div class="form-message" id="formMessage" aria-live="polite"></div>
+
+        <div class="form-group">
+          <label for="fullName">Kami sebaiknya memanggilmu apa?</label>
+          <p class="field-help">Gunakan nama depan atau nama panggilan.</p>
+
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Contoh: Keisya"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>Apa jenjang pendidikanmu?</label>
+          <p class="field-help">Pilih jenjang yang sedang kamu jalani.</p>
+
+          <div class="option-grid education-options">
+            <label class="choice-card">
+              <input type="radio" name="educationLevel" value="D3" required>
+              <span class="choice-content">
+                <strong>D3</strong>
+                <small>Diploma Tiga</small>
+              </span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="educationLevel" value="D4">
+              <span class="choice-content">
+                <strong>D4</strong>
+                <small>Sarjana Terapan</small>
+              </span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="educationLevel" value="S1">
+              <span class="choice-content">
+                <strong>S1</strong>
+                <small>Sarjana</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="major">Apa bidang studimu?</label>
+          <p class="field-help">Masukkan jurusan atau program studimu.</p>
+
+          <input
+            type="text"
+            id="major"
+            name="major"
+            placeholder="Contoh: Sistem Informasi"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="semester">Semester saat ini</label>
+          <p class="field-help">Digunakan untuk memahami linimasa pengembanganmu.</p>
+
+          <select id="semester" name="semester" required>
+            <option value="">Pilih semester</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+            <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
+            <option value="9">Semester 9+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="graduationYear">Perkiraan tahun kelulusan</label>
+          <p class="field-help">Cukup masukkan perkiraan.</p>
+
+          <select id="graduationYear" name="graduationYear" required>
+            <option value="">Pilih tahun</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Pengalaman apa yang sudah kamu miliki?</label>
+          <p class="field-help">Pilih minimal satu yang sesuai.</p>
+
+          <div class="experience-grid">
+            <label class="checkbox-card">
+              <input type="checkbox" name="experience" value="Academic Project">
+              <span>Proyek Akademik</span>
+            </label>
+
+            <label class="checkbox-card">
+              <input type="checkbox" name="experience" value="Personal Project">
+              <span>Proyek Pribadi</span>
+            </label>
+
+            <label class="checkbox-card">
+              <input type="checkbox" name="experience" value="Organization">
+              <span>Organisasi</span>
+            </label>
+
+            <label class="checkbox-card">
+              <input type="checkbox" name="experience" value="Competition">
+              <span>Kompetisi</span>
+            </label>
+
+            <label class="checkbox-card">
+              <input type="checkbox" name="experience" value="Internship">
+              <span>Magang</span>
+            </label>
+
+            <label class="checkbox-card">
+              <input type="checkbox" name="experience" value="Work Experience">
+              <span>Pengalaman Kerja</span>
+            </label>
+
+            <label class="checkbox-card experience-none">
+              <input type="checkbox" name="experience" value="No Experience" data-no-experience>
+              <span>Belum memiliki pengalaman</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary" id="profileBackButton">Kembali</a>
+
+          <button type="submit" class="btn btn-primary" id="profileSaveButton">
+            Simpan & Lanjutkan <span>→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/protected-main.js"></script>
+</body>
+</html>

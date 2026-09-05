@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Masuk ke Pathly untuk melanjutkan asesmen, roadmap, dan progres kariermu."
+    >
+    <title>Masuk | Pathly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/polish.css">
+    <link rel="stylesheet" href="css/visual-upgrade.css">
+  </head>
+  <body class="auth-page">
+    <header class="navbar auth-navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo">Pathly<span>.</span></a>
+        <div class="auth-navbar-actions">
+          <a href="index.html" class="auth-back-link">← Beranda</a>
+          <span>Belum punya akun?</span>
+          <a href="signup.html" class="auth-navbar-link">Daftar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <div class="container auth-shell auth-shell-login">
+        <section class="auth-intro" aria-labelledby="loginTitle">
+          <p class="section-label">SELAMAT DATANG KEMBALI</p>
+          <h1 id="loginTitle">Lanjutkan langkah yang sudah kamu mulai.</h1>
+          <p class="auth-intro-copy">
+            Masuk untuk membuka kembali hasil asesmen, roadmap, dan progres
+            pengembangan kariermu.
+          </p>
+
+          <div class="auth-return-card">
+            <span aria-hidden="true">↗</span>
+            <div>
+              <strong>Progresmu tetap terhubung</strong>
+              <p>
+                Pathly akan membawamu ke langkah berikutnya berdasarkan profil
+                yang sudah tersimpan.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-card" aria-labelledby="loginFormTitle">
+          <div class="auth-card-heading">
+            <p class="section-label">MASUK KE PATHLY</p>
+            <h2 id="loginFormTitle">Buka perjalanan kariermu.</h2>
+            <p>Masukkan email dan password yang telah terdaftar.</p>
+          </div>
+
+          <form id="loginForm" class="auth-form" novalidate>
+            <div class="auth-field">
+              <label for="loginEmail">Email</label>
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                maxlength="254"
+                placeholder="nama@email.com"
+                required
+              >
+            </div>
+
+            <div class="auth-field">
+              <div class="auth-field-heading">
+                <label for="loginPassword">Password</label>
+                <a href="forgot-password.html">Lupa password?</a>
+              </div>
+              <div class="password-control">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  name="password"
+                  autocomplete="current-password"
+                  placeholder="Masukkan password"
+                  required
+                >
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="loginPasswordToggle"
+                  data-password-toggle="loginPassword"
+                  aria-label="Tampilkan password"
+                  title="Tampilkan password"
+                ></button>
+              </div>
+            </div>
+
+            <div class="auth-message" id="loginMessage" aria-live="polite"></div>
+
+            <button type="submit" class="btn btn-primary auth-submit" id="loginButton">
+              <span class="button-label">Masuk</span>
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <p class="auth-switch">
+            Belum punya akun? <a href="signup.html">Daftar sekarang</a>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="js/auth/password-toggle.js"></script>
+    <script type="module" src="js/pages/login.js"></script>
+  </body>
+</html>

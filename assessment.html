@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesmen Keahlian | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/assessment.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="assessment-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="career.html" class="back-link">← Ganti Karier</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="assessment-main">
+    <div class="container assessment-container">
+      <div class="assessment-top">
+        <div>
+          <p class="section-label">ASESMEN KEAHLIAN + BUKTI</p>
+          <h1 id="assessmentTitle">Asesmen kariermu</h1>
+          <p id="assessmentDescription">
+            Pilih tingkat yang paling sesuai dengan pengalamanmu saat ini.
+          </p>
+        </div>
+
+        <div class="career-target-box">
+          <span>TARGET KARIER</span>
+          <strong id="careerTargetName">Memuat...</strong>
+        </div>
+      </div>
+
+      <p class="data-provenance-note" id="dataProvenanceNote" hidden></p>
+
+      <div class="question-progress">
+        <div class="question-progress-info">
+          <span id="questionCounter">Keahlian 1</span>
+          <span id="progressPercent">0%</span>
+        </div>
+
+        <div class="question-progress-track">
+          <div class="question-progress-value" id="questionProgressValue"></div>
+        </div>
+      </div>
+
+      <section class="assessment-card" id="assessmentCard">
+        <div class="skill-question">
+          <span class="skill-number" id="skillNumber">01</span>
+          <p>Bagaimana tingkat kemampuanmu dalam:</p>
+          <h2 id="skillName">Memuat keahlian...</h2>
+          <p class="skill-definition" id="skillDefinition"></p>
+        </div>
+
+        <div class="assessment-block">
+          <div class="assessment-block-heading">
+            <div>
+              <span class="block-label">TINGKAT SAAT INI</span>
+              <h3>Pilih tingkat yang paling menggambarkan dirimu.</h3>
+            </div>
+          </div>
+
+          <div class="level-grid" id="levelGrid">
+            <label class="level-card">
+              <input type="radio" name="skillLevel" value="0">
+              <span class="level-card-content">
+                <span class="level-number">0</span>
+                <strong>Belum Mulai</strong>
+                <small>Belum pernah mempelajari keahlian ini.</small>
+              </span>
+            </label>
+
+            <label class="level-card">
+              <input type="radio" name="skillLevel" value="1">
+              <span class="level-card-content">
+                <span class="level-number">1</span>
+                <strong>Sedang Belajar</strong>
+                <small>Memahami dasar atau sedang mempelajarinya.</small>
+              </span>
+            </label>
+
+            <label class="level-card">
+              <input type="radio" name="skillLevel" value="2">
+              <span class="level-card-content">
+                <span class="level-number">2</span>
+                <strong>Sudah Diterapkan</strong>
+                <small>Pernah menggunakannya dalam tugas atau proyek.</small>
+              </span>
+            </label>
+
+            <label class="level-card">
+              <input type="radio" name="skillLevel" value="3">
+              <span class="level-card-content">
+                <span class="level-number">3</span>
+                <strong>Mandiri</strong>
+                <small>Dapat menggunakannya secara mandiri.</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="assessment-block evidence-block">
+          <div class="assessment-block-heading">
+            <div>
+              <span class="block-label">REFERENSI BUKTI</span>
+              <h3>Di mana kamu pernah menggunakan keahlian ini?</h3>
+            </div>
+            <p>Pilih minimal satu, termasuk “Belum Ada Bukti”.</p>
+          </div>
+
+          <div class="evidence-grid" id="evidenceGrid">
+            <label class="evidence-card">
+              <input type="checkbox" name="skillEvidence" value="Academic Assignment">
+              <span>Tugas Akademik</span>
+            </label>
+
+            <label class="evidence-card">
+              <input type="checkbox" name="skillEvidence" value="Personal Project">
+              <span>Proyek Pribadi</span>
+            </label>
+
+            <label class="evidence-card">
+              <input type="checkbox" name="skillEvidence" value="Competition / Project">
+              <span>Kompetisi / Proyek</span>
+            </label>
+
+            <label class="evidence-card">
+              <input type="checkbox" name="skillEvidence" value="Internship / Work">
+              <span>Magang / Pekerjaan</span>
+            </label>
+
+            <label class="evidence-card">
+              <input type="checkbox" name="skillEvidence" value="Certificate">
+              <span>Sertifikat</span>
+            </label>
+
+            <label class="evidence-card">
+              <input type="checkbox" name="skillEvidence" value="Other" id="otherEvidence">
+              <span>Lainnya</span>
+            </label>
+
+            <label class="evidence-card evidence-none">
+              <input type="checkbox" name="skillEvidence" value="None" id="noEvidence">
+              <span>Belum Ada Bukti</span>
+            </label>
+          </div>
+
+          <div class="evidence-other-detail" id="otherEvidenceDetail" hidden>
+            <label for="otherEvidenceText">Jelaskan bukti lainnya</label>
+            <input
+              type="text"
+              id="otherEvidenceText"
+              maxlength="100"
+              placeholder="Contoh: kegiatan organisasi atau proyek komunitas"
+            >
+          </div>
+
+          <div class="evidence-other-detail" id="evidenceProofDetail" hidden>
+            <label for="evidenceProofText">Tautan atau catatan referensi (wajib)</label>
+            <input
+              type="text"
+              id="evidenceProofText"
+              maxlength="150"
+              placeholder="Contoh: tautan portofolio, nama mata kuliah, atau catatan proyek"
+            >
+            <small class="evidence-proof-hint">
+              Ini adalah inventaris portofolio, bukan verifikasi otomatis. Jangan
+              masukkan dokumen privat, nomor identitas, atau data sensitif.
+            </small>
+          </div>
+        </div>
+
+        <div class="assessment-message" id="assessmentMessage" aria-live="polite"></div>
+
+        <div class="assessment-actions">
+          <button type="button" class="btn btn-secondary" id="previousButton">
+            ← Sebelumnya
+          </button>
+
+          <button type="button" class="btn btn-primary" id="nextButton">
+            Simpan & Lanjutkan <span>→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="assessment-complete" id="assessmentComplete">
+        <div class="complete-icon">✓</div>
+        <p class="section-label">ASESMEN SELESAI</p>
+        <h2>Profil keahlianmu telah disimpan.</h2>
+        <p>Pathly akan membandingkan kemampuanmu dengan kebutuhan kariermu.</p>
+
+        <div class="complete-summary">
+          <div>
+            <span>KARIER</span>
+            <strong id="completeCareer">-</strong>
+          </div>
+          <div>
+            <span>KEAHLIAN DINILAI</span>
+            <strong id="completeSkillCount">-</strong>
+          </div>
+          <div>
+            <span>DENGAN REFERENSI</span>
+            <strong id="completeEvidenceCount">-</strong>
+          </div>
+        </div>
+
+        <a href="results.html" class="btn btn-primary">
+          Lihat Hasil <span>→</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/assessment.js"></script>
+</body>
+</html>

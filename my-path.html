@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jalur Saya | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/my-path.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="my-path-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="index.html" class="back-link">← Beranda</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="my-path-main">
+    <div class="container my-path-container" id="myPathContainer">
+      <section class="my-path-header">
+        <div>
+          <p class="section-label">JALUR SAYA</p>
+          <h1>Terus bangun jalurmu.</h1>
+          <p>Pantau target, progres keahlian, dan roadmap dalam satu tempat.</p>
+        </div>
+
+        <div class="dashboard-target">
+          <span>TARGET KARIER</span>
+          <strong id="dashboardCareer">Memuat...</strong>
+          <a href="#careerHistory" class="dashboard-target-switch">
+            Ganti Target Karier
+          </a>
+        </div>
+      </section>
+
+      <section class="dashboard-summary">
+        <article class="summary-card">
+          <span>KESESUAIAN KEAHLIAN</span>
+          <strong id="dashboardAlignment">-</strong>
+          <p>Kecocokan kemampuan dengan kebutuhan karier</p>
+        </article>
+
+        <article class="summary-card">
+          <span>PROGRES ROADMAP</span>
+          <strong id="dashboardProgress">0%</strong>
+          <p id="dashboardProgressText">0 dari 0 tugas selesai</p>
+        </article>
+
+        <article class="summary-card">
+          <span>KEAHLIAN DIKUASAI</span>
+          <strong id="dashboardDeveloped">-</strong>
+          <p>Keahlian yang telah mencapai target</p>
+        </article>
+
+        <article class="summary-card">
+          <span>REFERENSI TERCATAT</span>
+          <strong id="dashboardEvidence">-</strong>
+          <p>Keahlian yang memiliki catatan atau tautan referensi</p>
+        </article>
+      </section>
+
+      <section class="career-history" id="careerHistory" aria-labelledby="careerHistoryTitle">
+        <div class="career-history-heading">
+          <div>
+            <p class="section-label">RIWAYAT TARGET</p>
+            <h2 id="careerHistoryTitle">Karier yang pernah dinilai.</h2>
+            <p>
+              Pilih kembali target lama tanpa menghapus asesmen dan roadmap
+              karier lainnya.
+            </p>
+          </div>
+
+          <a href="career-stage.html" class="btn btn-secondary">
+            Pilih Karier Lain
+          </a>
+        </div>
+
+        <p class="career-history-message" id="careerHistoryMessage" aria-live="polite">
+          Memuat riwayat karier...
+        </p>
+        <div class="career-history-list" id="careerHistoryList"></div>
+      </section>
+
+      <section class="path-progress-card">
+        <div class="path-progress-top">
+          <div>
+            <p class="section-label">PROGRES ROADMAP</p>
+            <h2>Perjalanan pengembanganmu.</h2>
+          </div>
+
+          <strong id="pathProgressPercent">0%</strong>
+        </div>
+
+        <div class="path-progress-track">
+          <div class="path-progress-value" id="pathProgressValue"></div>
+        </div>
+      </section>
+
+      <section class="dashboard-next-action">
+        <div>
+          <span class="next-label">TINDAKAN BERIKUTNYA</span>
+          <h2 id="dashboardNextTitle">Memuat tindakan...</h2>
+          <p id="dashboardNextMeta">-</p>
+        </div>
+      </section>
+
+      <div class="dashboard-tabs">
+        <button
+          class="dashboard-tab active"
+          data-tab="roadmap"
+          type="button"
+        >
+          Peta Jalan
+        </button>
+
+        <button
+          class="dashboard-tab"
+          data-tab="skills"
+          type="button"
+        >
+          Keahlian
+        </button>
+      </div>
+
+      <section class="dashboard-panel active" id="roadmapPanel">
+        <div class="panel-heading">
+          <p class="section-label">TUGAS PENGEMBANGAN</p>
+          <h2>Pelajari. Terapkan. Buktikan.</h2>
+          <p>
+            Centang tugas setelah selesai. Klik centangnya lagi bila ingin
+            membatalkan; progres akan disimpan ke akunmu.
+          </p>
+        </div>
+
+        <p class="task-save-message" id="taskSaveMessage" aria-live="polite"></p>
+        <div class="dashboard-roadmap" id="dashboardRoadmap"></div>
+      </section>
+
+      <section class="dashboard-panel" id="skillsPanel">
+        <div class="panel-heading">
+          <p class="section-label">KEAHLIAN SAAT INI</p>
+          <h2>Ringkasan kompetensimu.</h2>
+          <p>Status berdasarkan asesmen terbarumu.</p>
+        </div>
+
+        <div class="dashboard-skills" id="dashboardSkills"></div>
+      </section>
+
+      <div class="my-path-actions">
+        <a href="roadmap.html" class="btn btn-secondary">
+          Lihat Roadmap Lengkap
+        </a>
+
+        <a href="assessment.html" class="btn btn-primary">
+          Perbarui Keahlian <span>→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/my-path.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jelajahi Karier | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/career.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="career-explorer-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="career-stage.html" class="back-link">← Tahap Karier</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="explorer-main">
+    <div class="container explorer-container">
+      <div class="onboarding-progress">
+        <div class="progress-info">
+          <span>Arah Karier</span>
+          <span>Langkah 3</span>
+        </div>
+
+        <div class="onboarding-progress-track">
+          <div class="onboarding-progress-value career-progress-value"></div>
+        </div>
+      </div>
+
+      <div class="mode-header">
+        <div class="mode-heading">
+          <span class="mode-badge" id="modeBadge">MODE KARIER</span>
+          <h1 id="modeTitle">Jelajahi arah kariermu.</h1>
+          <p id="modeDescription">Pilih jalur karier untuk melanjutkan.</p>
+        </div>
+
+        <div class="mode-info">
+          <span>YANG PERLU DILAKUKAN</span>
+          <strong id="modeHint">Pilih satu karier.</strong>
+        </div>
+      </div>
+
+      <p class="data-provenance-note" id="dataProvenanceNote" hidden></p>
+
+      <section class="dream-career-section" aria-labelledby="dreamCareerTitle">
+        <div class="dream-career-heading">
+          <div>
+            <p class="section-label">PEKERJAAN IMPIANMU</p>
+            <h2 id="dreamCareerTitle">Sudah punya pekerjaan impian?</h2>
+            <p>
+              Tulis pekerjaan yang kamu inginkan. Pathly akan membantu
+              jika pilihanmu masih terlalu umum.
+            </p>
+          </div>
+
+          <span class="dream-career-badge">Pencarian katalog karier</span>
+        </div>
+
+        <form class="dream-career-form" id="dreamCareerForm">
+          <label for="dreamCareerInput">Nama pekerjaan atau bidang karier</label>
+
+          <div class="dream-career-input-row">
+            <input
+              type="text"
+              id="dreamCareerInput"
+              placeholder="Contoh: HR, Product Manager, atau Cybersecurity Analyst"
+              autocomplete="off"
+              maxlength="80"
+              aria-describedby="dreamCareerHelp"
+              required
+            >
+
+            <button type="submit" class="btn btn-primary">
+              Gunakan Karier Ini <span>→</span>
+            </button>
+          </div>
+
+          <p class="dream-career-help" id="dreamCareerHelp">
+            Tulis nama yang spesifik. Saat ini Pathly hanya menganalisis karier yang cocok dengan katalog yang tersedia.
+          </p>
+        </form>
+
+        <div class="career-clarification" id="careerClarification" aria-live="polite">
+          <div class="clarification-heading">
+            <span>PERLU LEBIH SPESIFIK</span>
+            <h3 id="clarificationTitle">Pilih arah karier yang sesuai.</h3>
+            <p id="clarificationDescription"></p>
+          </div>
+
+          <div class="specific-career-options" id="specificCareerOptions"></div>
+
+          <div class="clarification-actions">
+            <button type="button" class="btn btn-secondary" id="unsureCareerButton">
+              Belum yakin — bantu saya memilih
+            </button>
+
+            <button type="button" class="text-action" id="writeAnotherCareerButton">
+              Tulis posisi lain
+            </button>
+          </div>
+
+          <div class="career-preference-panel" id="careerPreferencePanel">
+            <p class="section-label">YANG PALING KAMU SUKAI</p>
+            <h3>Aktivitas mana yang paling menarik bagimu?</h3>
+            <p>Pilih satu untuk mendapatkan rekomendasi posisi.</p>
+
+            <div
+              class="career-preference-options"
+              id="careerPreferenceOptions"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="explorer-section-header">
+          <h2>Pilihan Karier Pathly</h2>
+          <p class="selection-counter" id="selectionCounter">0 dipilih</p>
+        </div>
+
+        <div class="explorer-career-grid" id="careerGrid"></div>
+        <div class="career-message" id="careerMessage" aria-live="polite"></div>
+
+        <div class="career-actions">
+          <a href="career-stage.html" class="btn btn-secondary">Kembali</a>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="careerContinueButton"
+            disabled
+          >
+            Lanjutkan <span>→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="comparison-panel" id="comparisonPanel">
+        <div class="comparison-heading">
+          <p class="section-label">PERBANDINGAN KARIER</p>
+          <h2>Bandingkan sebelum menentukan pilihan.</h2>
+          <p>
+            Bandingkan fokus dan kompetensinya, lalu pilih target kariermu.
+          </p>
+        </div>
+
+        <div class="comparison-grid" id="comparisonGrid"></div>
+
+        <div class="target-confirmation" id="targetConfirmation">
+          <span>TARGET KARIER TERPILIH</span>
+          <strong id="targetConfirmationName"></strong>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/career.js"></script>
+</body>
+</html>

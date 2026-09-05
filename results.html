@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hasil Kesenjangan Keahlian | Pathly</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/results.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/visual-upgrade.css">
+  <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body class="results-page">
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">Pathly<span>.</span></a>
+      <div class="navbar-tools">
+        <a href="assessment.html" class="back-link">← Tinjau Asesmen</a>
+        <div class="nav-auth" data-auth-slot data-auth-context="internal"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="results-main">
+    <div class="container results-container" id="resultsContainer">
+      <div class="results-heading">
+        <div class="results-heading-text">
+          <p class="section-label">KESENJANGAN KEAHLIANMU</p>
+          <h1>Inilah posisimu saat ini.</h1>
+          <p>
+            Pathly membandingkan kemampuanmu dengan kebutuhan
+            karier pilihanmu.
+          </p>
+        </div>
+
+        <div class="results-target">
+          <span>TARGET KARIER</span>
+          <strong id="resultCareerName">Memuat...</strong>
+        </div>
+      </div>
+
+      <section class="alignment-card">
+        <div class="score-circle" id="scoreCircle">
+          <div class="score-content">
+            <strong id="alignmentScore">0%</strong>
+            <span>KESESUAIAN KEAHLIAN</span>
+          </div>
+        </div>
+
+        <div class="alignment-info">
+          <p class="section-label">KESESUAIAN SAAT INI</p>
+          <h2 id="alignmentHeadline">Menghitung hasil...</h2>
+          <p id="alignmentDescription">Membandingkan kemampuanmu dengan target.</p>
+
+          <div class="alignment-progress">
+            <div class="alignment-progress-top">
+              <span>Cakupan kebutuhan</span>
+              <span id="alignmentBarPercent">0%</span>
+            </div>
+
+            <div class="alignment-bar">
+              <div class="alignment-bar-value" id="alignmentBarValue"></div>
+            </div>
+          </div>
+
+          <div class="alignment-disclaimer">
+            Nilai ini menunjukkan cakupan kemampuan, bukan peluang
+            diterima kerja.
+          </div>
+        </div>
+      </section>
+
+      <div class="result-stats">
+        <div class="result-stat">
+          <span>SUDAH DIKUASAI</span>
+          <strong id="developedCount">0</strong>
+        </div>
+
+        <div class="result-stat">
+          <span>SEDANG DIKEMBANGKAN</span>
+          <strong id="developingCount">0</strong>
+        </div>
+
+        <div class="result-stat">
+          <span>BELUM DIMILIKI</span>
+          <strong id="missingCount">0</strong>
+        </div>
+
+        <div class="result-stat">
+          <span>DENGAN REFERENSI</span>
+          <strong id="evidenceCount">0</strong>
+        </div>
+      </div>
+
+      <section class="result-section">
+        <div class="result-section-heading">
+          <p class="section-label">KESENJANGAN PRIORITAS</p>
+          <h2>Apa yang sebaiknya kamu prioritaskan?</h2>
+          <p>Prioritas ditentukan dari bobot dan besar kesenjangan.</p>
+        </div>
+
+        <div class="priority-grid" id="priorityGrid"></div>
+      </section>
+
+      <section class="result-section">
+        <div class="result-section-heading">
+          <p class="section-label">PETA KEAHLIAN</p>
+          <h2>Ringkasan kemampuanmu.</h2>
+          <p>Lihat tingkat, target, status, dan referensi setiap keahlian.</p>
+        </div>
+
+        <div class="skill-result-list" id="skillResultList"></div>
+
+        <div class="result-legend">
+          <div class="legend-item">
+            <span class="legend-dot legend-developed"></span>
+            Sudah Dikuasai
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-developing"></span>
+            Sedang Dikembangkan
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-missing"></span>
+            Belum Dimiliki
+          </div>
+        </div>
+      </section>
+
+      <div class="results-bottom">
+        <a href="assessment.html" class="btn btn-secondary">
+          Tinjau Asesmen
+        </a>
+
+        <a href="readiness.html" class="btn btn-primary">
+          Lanjutkan ke Kesiapan <span>→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/pages/results.js"></script>
+</body>
+</html>
