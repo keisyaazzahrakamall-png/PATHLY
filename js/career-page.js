@@ -3,10 +3,6 @@ import { saveCareerJourney } from "./lib/user-data.js";
 const careers = window.PATHLY_CAREERS || [];
 const customCareerEngine = window.PATHLY_CUSTOM_CAREER_ENGINE;
 const dataProvenance = window.PATHLY_DATA_PROVENANCE || null;
-
-
-/* ELEMEN HALAMAN */
-
 const careerGrid = document.getElementById("careerGrid");
 const modeBadge = document.getElementById("modeBadge");
 const modeTitle = document.getElementById("modeTitle");
@@ -49,9 +45,6 @@ const careerPreferencePanel = document.getElementById(
 const careerPreferenceOptions = document.getElementById(
     "careerPreferenceOptions"
 );
-
-
-/* MODE HALAMAN */
 
 const modeConfig = {
     explore: {
@@ -98,10 +91,6 @@ modeTitle.textContent = currentMode.title;
 modeDescription.textContent = currentMode.description;
 modeHint.textContent = currentMode.hint;
 continueButton.hidden = careerMode === "validate";
-
-
-/* DATA PILIHAN */
-
 let selectedCareerIds = [];
 let activeClarificationGroup = null;
 
@@ -124,9 +113,6 @@ if (careerMode === "validate" && savedComparison) {
     selectedCareerIds = [savedTarget];
 }
 
-
-/* PESAN */
-
 function showMessage(message, isError) {
     careerMessage.textContent = message;
     careerMessage.classList.add("show");
@@ -145,9 +131,6 @@ function escapeHtml(value) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
-
-
-/* CATATAN SUMBER DATA */
 
 function formatReviewDate(isoDate) {
     const parsed = new Date(isoDate);
@@ -180,9 +163,6 @@ function renderDataProvenanceNote() {
     noteElement.title = dataProvenance.reviewCycle || "";
 }
 
-
-/* MENCARI KARIER */
-
 function findCareer(careerId) {
     return careers.find(function (career) {
         return career.id === careerId;
@@ -200,9 +180,6 @@ function createSkillTags(skills, limit) {
         })
         .join("");
 }
-
-
-/* MENAMPILKAN KARTU KARIER */
 
 function renderCareers() {
     careerGrid.innerHTML = "";
@@ -262,9 +239,6 @@ function renderCareers() {
     });
 }
 
-
-/* MENYIMPAN PILIHAN PERBANDINGAN */
-
 function saveComparedCareers() {
     localStorage.setItem(
         "pathlyComparedCareers",
@@ -282,9 +256,6 @@ function saveComparedCareers() {
         }
     });
 }
-
-
-/* MEMILIH KARIER */
 
 function handleCareerSelection(careerId, input) {
     hideMessage();
@@ -320,9 +291,6 @@ function handleCareerSelection(careerId, input) {
     updateValidationSelection();
 }
 
-
-/* MEMPERBARUI PILIHAN TUNGGAL */
-
 function updateSingleSelection() {
     const count = selectedCareerIds.length;
 
@@ -351,9 +319,6 @@ function updateSingleSelection() {
         `${escapeHtml(buttonText)} <span>→</span>`;
 }
 
-
-/* MEMPERBARUI MODE VALIDASI */
-
 function updateValidationSelection() {
     const count = selectedCareerIds.length;
 
@@ -365,9 +330,6 @@ function updateValidationSelection() {
         comparisonPanel.classList.remove("show");
     }
 }
-
-
-/* MENAMPILKAN PERBANDINGAN */
 
 function renderComparison() {
     if (selectedCareerIds.length < 2) {
@@ -431,9 +393,6 @@ function renderComparison() {
         });
 }
 
-
-/* MENYIMPAN TARGET KARIER */
-
 async function chooseCareerTarget(careerId) {
     const career = findCareer(careerId);
 
@@ -467,9 +426,6 @@ async function chooseCareerTarget(careerId) {
         window.location.href = "assessment.html";
     }, 600);
 }
-
-
-/* MEMBUAT KARIER PILIHAN PENGGUNA */
 
 function selectCustomCareer(data, message) {
     const career = customCareerEngine.saveCareer(data);
@@ -531,9 +487,6 @@ function selectCustomCareer(data, message) {
     }
 }
 
-
-/* MEMBUAT KARIER DARI TEMPLATE */
-
 function selectCareerTemplate(template, message) {
     const data = customCareerEngine.buildCareer(
         template.name,
@@ -546,9 +499,6 @@ function selectCareerTemplate(template, message) {
         `${template.name} dipilih dan siap digunakan untuk asesmen.`
     );
 }
-
-
-/* MENAMPILKAN POSISI YANG LEBIH SPESIFIK */
 
 function showSpecificCareers(group) {
     activeClarificationGroup = group;
@@ -596,9 +546,6 @@ function showSpecificCareers(group) {
     });
 }
 
-
-/* REKOMENDASI BERDASARKAN PREFERENSI */
-
 function showPreferenceOptions() {
     careerPreferenceOptions.innerHTML = "";
 
@@ -631,9 +578,6 @@ function showPreferenceOptions() {
         }
     );
 }
-
-
-/* FORM PEKERJAAN IMPIAN */
 
 if (dreamCareerForm && customCareerEngine) {
     dreamCareerInput.addEventListener("input", function () {
@@ -752,9 +696,6 @@ if (dreamCareerForm && customCareerEngine) {
     );
 }
 
-
-/* TOMBOL LANJUT */
-
 continueButton.addEventListener("click", function () {
     if (careerMode === "validate") {
         return;
@@ -771,10 +712,6 @@ continueButton.addEventListener("click", function () {
 
     chooseCareerTarget(selectedCareerIds[0]);
 });
-
-
-/* MEMULAI HALAMAN */
-
 renderCareers();
 renderDataProvenanceNote();
 

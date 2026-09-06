@@ -1,5 +1,3 @@
-/* WARNA TEMA */
-
 :root {
     --blue: #3b82f6;
     --blue-soft: #eff6ff;
@@ -26,9 +24,6 @@
     --shadow-glow:
         0 24px 70px rgba(35, 84, 110, 0.14);
 }
-
-
-/* LATAR BELAKANG */
 
 body {
     background:
@@ -71,9 +66,6 @@ body::before {
     mask-image: linear-gradient(to bottom, black, transparent 75%);
 }
 
-
-/* NAVIGASI */
-
 .navbar {
     border-bottom: 1px solid rgba(45, 140, 136, 0.16) !important;
     background: rgba(226, 239, 239, 0.88) !important;
@@ -98,9 +90,6 @@ body::before {
     color: transparent !important;
 }
 
-
-/* LABEL */
-
 .section-label,
 .block-label,
 .small-label {
@@ -111,9 +100,6 @@ body::before {
     background: rgba(211, 235, 232, 0.9) !important;
     letter-spacing: 1.45px;
 }
-
-
-/* TOMBOL */
 
 .btn-primary,
 .btn-nav {
@@ -151,9 +137,6 @@ body::before {
     box-shadow: 0 7px 22px rgba(15, 23, 42, 0.04);
 }
 
-
-/* KARTU UTAMA */
-
 .value-card,
 .career-card,
 .profile-form,
@@ -178,9 +161,6 @@ body::before {
     background: var(--surface-mix) !important;
     box-shadow: 0 14px 42px rgba(15, 23, 42, 0.06);
 }
-
-
-/* HERO */
 
 .hero {
     position: relative;
@@ -264,9 +244,6 @@ body::before {
     font-weight: 900;
 }
 
-
-/* DASHBOARD HERO */
-
 .hero-visual {
     position: relative;
     perspective: 1100px;
@@ -336,9 +313,6 @@ body::before {
     position: relative;
     overflow: hidden;
 }
-
-
-/* BAGIAN LANDING PAGE */
 
 .value-section,
 .career-section {
@@ -423,9 +397,6 @@ body::before {
     border: 1px solid rgba(45, 140, 136, 0.1);
 }
 
-
-/* BAGIAN DALAM APLIKASI */
-
 .onboarding-main,
 .career-stage-main,
 .explorer-main,
@@ -479,9 +450,6 @@ body::before {
     letter-spacing: -2px;
 }
 
-
-/* PROGRESS BAR */
-
 .onboarding-progress-track,
 .question-progress-track,
 .alignment-bar,
@@ -501,9 +469,6 @@ body::before {
     background: var(--gradient-accent) !important;
     box-shadow: 0 0 16px rgba(45, 140, 136, 0.22);
 }
-
-
-/* FORM */
 
 .profile-form,
 .assessment-card,
@@ -543,9 +508,6 @@ body::before {
     box-shadow: 0 0 0 4px rgba(45, 140, 136, 0.08);
 }
 
-
-/* PILIHAN AKTIF */
-
 .choice-card input:checked + .choice-content,
 .checkbox-card:has(input:checked),
 .stage-card input:checked + .stage-card-content,
@@ -562,9 +524,6 @@ body::before {
         ) !important;
     box-shadow: 0 10px 28px rgba(45, 140, 136, 0.08);
 }
-
-
-/* TAHAP KARIER */
 
 .stage-grid {
     gap: 22px;
@@ -610,9 +569,6 @@ body::before {
     background: var(--gradient-accent) !important;
 }
 
-
-/* PILIHAN KARIER */
-
 .mode-header {
     position: relative;
     overflow: hidden;
@@ -656,9 +612,6 @@ body::before {
             rgba(239, 246, 255, 0.9)
         ) !important;
 }
-
-
-/* ASESMEN */
 
 .career-target-box,
 .results-target,
@@ -713,9 +666,6 @@ body::before {
     background: var(--gradient-accent) !important;
     color: var(--white) !important;
 }
-
-
-/* HASIL */
 
 .alignment-card {
     position: relative;
@@ -792,9 +742,6 @@ body::before {
     border-color: rgba(45, 140, 136, 0.28) !important;
 }
 
-
-/* KESIAPAN KARIER */
-
 .adaptability-section {
     background:
         radial-gradient(
@@ -813,9 +760,6 @@ body::before {
             #e6edf5
         ) !important;
 }
-
-
-/* ROADMAP */
 
 .next-action-card {
     box-shadow: 0 26px 55px rgba(21, 34, 56, 0.2);
@@ -870,9 +814,6 @@ body::before {
         ) !important;
 }
 
-
-/* MY PATH */
-
 .path-progress-card {
     background:
         radial-gradient(
@@ -922,9 +863,6 @@ body::before {
     accent-color: var(--teal);
 }
 
-
-/* HOVER DESKTOP */
-
 @media (hover: hover) {
     .value-card:hover,
     .career-card:hover,
@@ -946,9 +884,6 @@ body::before {
     }
 }
 
-
-/* TABLET */
-
 @media (max-width: 900px) {
     .hero {
         padding-top: 72px;
@@ -964,9 +899,6 @@ body::before {
         border-radius: 28px;
     }
 }
-
-
-/* HP */
 
 @media (max-width: 650px) {
     body::before {
@@ -1023,9 +955,6 @@ body::before {
         border-radius: 14px;
     }
 }
-
-
-/* AKSESIBILITAS */
 
 @media (prefers-reduced-motion: reduce) {
     *,

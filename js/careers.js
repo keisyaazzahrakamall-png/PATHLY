@@ -98,8 +98,6 @@ window.PATHLY_CAREERS = [
     }
 ];
 
-
-/* SUMBER DATA & JADWAL PENINJAUAN */
 window.PATHLY_DATA_PROVENANCE = {
     methodology:
         "Keahlian dipetakan manual dari profil pekerjaan O*NET, taksonomi ESCO, dan portal SKKNI. Bobot Inti/Penting adalah heuristik prioritas belajar Pathly, bukan ambang rekrutmen.",

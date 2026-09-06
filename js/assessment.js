@@ -9,15 +9,9 @@ const targetCareer = careers.find(function (career) {
     return career.id === savedTarget;
 });
 
-
-/* DATA ASESMEN */
-
 let currentSkillIndex = 0;
 let answers = {};
 let lastUpdatedAt = null;
-
-
-/* ELEMEN HALAMAN */
 
 const assessmentCard = document.getElementById("assessmentCard");
 const assessmentComplete = document.getElementById("assessmentComplete");
@@ -42,9 +36,6 @@ const otherEvidenceText = document.getElementById("otherEvidenceText");
 const evidenceProofDetail = document.getElementById("evidenceProofDetail");
 const evidenceProofText = document.getElementById("evidenceProofText");
 
-
-/* MEMBACA DATA TERSIMPAN */
-
 function readSavedAssessment() {
     const savedData = localStorage.getItem("pathlyAssessmentResults");
 
@@ -60,9 +51,6 @@ function readSavedAssessment() {
     }
 }
 
-
-/* MENAMPILKAN PESAN */
-
 function showMessage(message) {
     assessmentMessage.textContent = message;
     assessmentMessage.classList.add("show");
@@ -71,9 +59,6 @@ function showMessage(message) {
 function hideMessage() {
     assessmentMessage.classList.remove("show");
 }
-
-
-/* CATATAN SUMBER DATA */
 
 function formatReviewDate(isoDate) {
     const parsed = new Date(isoDate);
@@ -106,9 +91,6 @@ function renderDataProvenanceNote() {
     noteElement.title = dataProvenance.reviewCycle || "";
 }
 
-
-/* MEMULAI ASESMEN */
-
 function startAssessment() {
     assessmentTitle.textContent = `Asesmen ${targetCareer.name}`;
     careerTargetName.textContent = targetCareer.name;
@@ -126,9 +108,6 @@ function startAssessment() {
 
     renderCurrentSkill();
 }
-
-
-/* MENAMPILKAN KEAHLIAN */
 
 function renderCurrentSkill() {
     hideMessage();
@@ -163,9 +142,6 @@ function renderCurrentSkill() {
     restoreAnswer(currentSkill);
 }
 
-
-/* MENGOSONGKAN PILIHAN */
-
 function clearInputs() {
     document
         .querySelectorAll(
@@ -181,9 +157,6 @@ function clearInputs() {
     if (evidenceProofText) evidenceProofText.value = "";
     if (evidenceProofDetail) evidenceProofDetail.hidden = true;
 }
-
-
-/* MENAMPILKAN JAWABAN LAMA */
 
 function restoreAnswer(skill) {
     const savedAnswer = answers[skill];
@@ -233,9 +206,6 @@ function restoreAnswer(skill) {
         evidenceProofDetail.hidden = !hasProofRequiringEvidence;
     }
 }
-
-
-/* ATURAN BUKTI */
 
 const evidenceInputs = document.querySelectorAll(
     'input[name="skillEvidence"]'
@@ -296,9 +266,6 @@ evidenceInputs.forEach(function (input) {
     });
 });
 
-
-/* MEMBANDINGKAN JAWABAN */
-
 function answersAreEqual(oldAnswer, newAnswer) {
     if (!oldAnswer) {
         return false;
@@ -317,9 +284,6 @@ function answersAreEqual(oldAnswer, newAnswer) {
             String(newAnswer.evidenceDetail || "")
     );
 }
-
-
-/* MENYIMPAN JAWABAN SAAT INI */
 
 async function saveCurrentAnswer() {
     const currentSkill = targetCareer.skills[currentSkillIndex];
@@ -410,9 +374,6 @@ async function saveCurrentAnswer() {
     return saved;
 }
 
-
-/* MENYIMPAN ASESMEN */
-
 async function saveAssessment(completed) {
     if (!lastUpdatedAt) {
         lastUpdatedAt = new Date().toISOString();
@@ -445,9 +406,6 @@ async function saveAssessment(completed) {
     return true;
 }
 
-
-/* MEMERIKSA KELENGKAPAN */
-
 function assessmentIsComplete() {
     const missingSkill = targetCareer.skills.find(function (skill) {
         return !answers[skill];
@@ -468,9 +426,6 @@ function assessmentIsComplete() {
 
     return false;
 }
-
-
-/* TOMBOL LANJUT */
 
 if (nextButton) {
     nextButton.addEventListener("click", async function () {
@@ -500,9 +455,6 @@ if (nextButton) {
     });
 }
 
-
-/* TOMBOL KEMBALI */
-
 if (previousButton) {
     previousButton.addEventListener("click", async function () {
         const currentSkill =
@@ -524,9 +476,6 @@ if (previousButton) {
         }
     });
 }
-
-
-/* MENYELESAIKAN ASESMEN */
 
 async function finishAssessment() {
     if (!(await saveAssessment(true))) {
@@ -565,9 +514,6 @@ async function finishAssessment() {
         behavior: "smooth"
     });
 }
-
-
-/* MEMULAI HALAMAN */
 
 if (!targetCareer) {
     assessmentCard.innerHTML = `

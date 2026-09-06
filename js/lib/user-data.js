@@ -64,8 +64,7 @@ export async function hydrateUserData() {
   const userId = await getUserId();
   if (!userId) return;
 
-  // Cache hanya membantu tampilan saat memuat. Pemiliknya harus sama dengan akun aktif.
-  prepareCacheForUser(userId);
+    prepareCacheForUser(userId);
 
   const [profileResponse, journeyResponse] = await Promise.all([
     supabase
@@ -385,8 +384,7 @@ export async function resetCareerJourney() {
   const userId = await getUserId();
   if (!userId) return { error: new Error("Sesi login tidak tersedia.") };
 
-  // Urutan ini menjaga relasi roadmap dan tugasnya tetap konsisten.
-  const tables = [
+   const tables = [
     "roadmap_tasks",
     "roadmaps",
     "career_readiness",

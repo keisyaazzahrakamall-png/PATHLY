@@ -12,8 +12,7 @@ import {
 } from "./lib/input-safety.js";
 
 (function () {
-    /* MEMBUAT DATA PEKERJAAN */
-
+    
     function createCareer(
         name,
         symbol,
@@ -32,9 +31,6 @@ import {
         };
     }
 
-
-    /* MEMBUAT KELOMPOK KARIER */
-
     function createGroup(
         id,
         name,
@@ -50,9 +46,6 @@ import {
             suggestions: suggestions
         };
     }
-
-
-    /* DATA KELOMPOK KARIER */
 
     const careerGroups = [
         createGroup(
@@ -695,9 +688,6 @@ import {
         )
     ];
 
-
-    /* PILIHAN PREFERENSI */
-
     const preferenceOptions = [
         {
             id: "people",
@@ -725,9 +715,6 @@ import {
         }
     ];
 
-
-    /* MEMBERSIHKAN TEKS */
-
     function normalize(value) {
         return String(value || "")
             .toLowerCase()
@@ -735,9 +722,6 @@ import {
             .replace(/\s+/g, " ")
             .trim();
     }
-
-
-    /* MENGAMANKAN INPUT NAMA KARIER */
 
     function sanitizeCareerData(data) {
         const rawName = data?.career?.name;
@@ -754,14 +738,8 @@ import {
         if (safeName.length < 2) {
             return null;
         }
-
-        // Semua atribut turunan dibangun ulang dari nama yang sudah aman.
-        // Isi description/skills dari penyimpanan tidak dipercaya begitu saja.
         return buildCareer(safeName);
     }
-
-
-    /* MEMBUAT ID KARIER */
 
     function createId(name) {
         const id = normalize(name)
@@ -770,9 +748,6 @@ import {
 
         return `custom-${id}`;
     }
-
-
-    /* MEMBUAT SIMBOL */
 
     function createSymbol(name) {
         return name
@@ -784,9 +759,6 @@ import {
             })
             .join("");
     }
-
-
-    /* MERAPIKAN NAMA KARIER */
 
     function formatTitle(value) {
         const uppercaseTerms = [
@@ -816,9 +788,6 @@ import {
             .join(" ");
     }
 
-
-    /* MENCARI KELOMPOK UMUM */
-
     function findBroadGroup(input) {
         const normalizedInput = normalize(input);
 
@@ -826,9 +795,6 @@ import {
             return group.aliases.includes(normalizedInput);
         });
     }
-
-
-    /* MENEBak KELOMPOK KARIER */
 
     function inferGroup(input) {
         const normalizedInput = normalize(input);
@@ -841,9 +807,6 @@ import {
             });
         });
     }
-
-
-    /* MENCARI TEMPLATE PEKERJAAN */
 
     function findBestTemplate(input, group) {
         if (!group) {
@@ -876,9 +839,6 @@ import {
         });
     }
 
-
-    /* MEMBUAT KEBUTUHAN SKILL */
-
     function buildRequirements(skills) {
         return skills.map(function (skill, index) {
             const isCore = index < 4;
@@ -891,9 +851,6 @@ import {
             };
         });
     }
-
-
-    /* MEMBUAT KARIER BARU */
 
     function buildCareer(name, template) {
         const safeName = sanitizeCareerName(name);
@@ -953,9 +910,6 @@ import {
             requirements: buildRequirements(skills)
         };
     }
-
-
-    /* MEMBACA DAN MENYIMPAN KOLEKSI KARIER KUSTOM */
 
     function readStoredCareers() {
         const storedCollection = localStorage.getItem(
@@ -1036,9 +990,6 @@ import {
                 : null
         });
     }
-
-
-    /* MENDAFTARKAN KARIER */
 
     function registerCareer(data) {
         data = sanitizeCareerData(data);
@@ -1134,9 +1085,6 @@ import {
         return data.career;
     }
 
-
-    /* MENYIMPAN KARIER */
-
     function saveCareer(data) {
         data = sanitizeCareerData(data);
 
@@ -1162,9 +1110,6 @@ import {
 
         return registeredCareer;
     }
-
-
-    /* MEMUAT KARIER TERSIMPAN */
 
     function loadStoredCareers() {
         const stored = readStoredCareers();
@@ -1194,9 +1139,6 @@ import {
         }
     }
 
-
-    /* MEMBERIKAN REKOMENDASI */
-
     function recommend(group, preference) {
         return (
             group.suggestions.find(function (suggestion) {
@@ -1204,9 +1146,6 @@ import {
             }) || group.suggestions[0]
         );
     }
-
-
-    /* MEMBUAT FITUR TERSEDIA UNTUK FILE LAIN */
 
     window.PATHLY_CUSTOM_CAREER_ENGINE = {
         groups: careerGroups,

@@ -93,8 +93,7 @@ const {
 } = await supabase.auth.getSession();
 
 if (!verificationResolved && resolveSession(session)) {
-  // Sesi dari tautan verifikasi sudah siap.
-} else if (!verificationResolved && (urlError || sessionError)) {
+  } else if (!verificationResolved && (urlError || sessionError)) {
   showFailure(urlError || sessionError.message);
 } else if (!verificationResolved && hasVerificationData()) {
   for (let attempt = 0; attempt < VERIFICATION_WAIT_ATTEMPTS; attempt += 1) {

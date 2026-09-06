@@ -150,9 +150,9 @@ Empat dimensi refleksi—perhatian, kendali, rasa ingin tahu, dan kepercayaan di
 
 ## Demo dan Screenshot
 
-- **Live demo:** `[TAMBAHKAN URL HOSTING]`
-- **Repository GitHub:** `[TAMBAHKAN URL REPOSITORY]`
-- **Video demo (opsional):** `[TAMBAHKAN URL VIDEO]`
+- **Live demo:** [https://pathly-velora.vercel.app](https://pathly-velora.vercel.app/)
+- **Repository GitHub:** [https://github.com/keisyaazzahrakamall-png/PATHLY](https://github.com/keisyaazzahrakamall-png/PATHLY)
+- **Video demo (opsional):** Belum tersedia.
 
 Sebelum submission, simpan screenshot di `docs/screenshots/`, lalu tampilkan pada bagian ini. Screenshot yang disarankan:
 
@@ -279,8 +279,8 @@ pathly/
 ### 1. Clone Repository
 
 ```bash
-git clone [URL_REPOSITORY]
-cd [NAMA_FOLDER_REPOSITORY]
+git clone https://github.com/keisyaazzahrakamall-png/PATHLY.git
+cd PATHLY
 ```
 
 ### 2. Install Dependency
@@ -431,7 +431,7 @@ Ringkasan yang juga terlihat sebelum pendaftaran tersedia pada [`privacy.html`](
 
 | Nama | Peran | GitHub/Portofolio |
 | --- | --- | --- |
-| Keisya Azzahra Kamal | Project Lead, UI/UX & Full-Stack Developer | `[TAMBAHKAN URL GITHUB/PORTOFOLIO]` |
+| Keisya Azzahra Kamal | Project Lead, UI/UX & Full-Stack Developer | [GitHub](https://github.com/keisyaazzahrakamall-png) |
 
 **Nama tim:** VELORA  
 **Kategori peserta:** Individu

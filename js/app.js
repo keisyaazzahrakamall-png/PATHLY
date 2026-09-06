@@ -3,9 +3,6 @@ import { saveCareerJourney } from "./lib/user-data.js";
 
 console.log("Pathly is running!");
 
-
-/* MEMBACA DATA LOCAL STORAGE */
-
 function getSavedData(key) {
     const savedData = localStorage.getItem(key);
 
@@ -20,9 +17,6 @@ function getSavedData(key) {
         return null;
     }
 }
-
-
-/* NAVIGASI HP */
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
@@ -45,9 +39,6 @@ if (menuButton && navLinks) {
         });
     });
 }
-
-
-/* PENANDA BAGIAN AKTIF DI NAVBAR */
 
 const sectionNavLinks = navLinks
     ? Array.from(navLinks.querySelectorAll('a[href^="#"]'))
@@ -101,9 +92,6 @@ if (observedSections.length) {
     window.addEventListener("resize", requestActiveSectionUpdate);
     updateActiveSection();
 }
-
-
-/* FORM PROFIL */
 
 const profileForm = document.getElementById("profileForm");
 const formMessage = document.getElementById("formMessage");
@@ -401,9 +389,6 @@ if (profileForm) {
     });
 }
 
-
-/* FORM TAHAP KARIER */
-
 const careerStageForm = document.getElementById("careerStageForm");
 const stageMessage = document.getElementById("stageMessage");
 const stageGreeting = document.getElementById("stageGreeting");
@@ -518,9 +503,6 @@ if (careerStageForm) {
     });
 }
 
-
-/* INFORMASI SETIAP MODE */
-
 const routeContent = {
     explore: {
         label: "MODE EKSPLORASI",
@@ -553,9 +535,6 @@ const routeContent = {
             "Pilih target kariermu sebelum memulai asesmen keahlian dan bukti."
     }
 };
-
-
-/* MENAMPILKAN MODE */
 
 const routeTitle = document.getElementById("routeTitle");
 const routeDescription = document.getElementById("routeDescription");

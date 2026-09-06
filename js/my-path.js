@@ -25,7 +25,6 @@ try {
     completedTasks = [];
 }
 
-// Memastikan completedTasks berbentuk array
 if (!Array.isArray(completedTasks)) {
     completedTasks = [];
 }

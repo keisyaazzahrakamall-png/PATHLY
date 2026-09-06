@@ -1,5 +1,3 @@
-/* WARNA DAN VARIABEL */
-
 :root {
     --navy: #152238;
     --navy-light: #213552;
@@ -20,9 +18,6 @@
     --shadow-sm: 0 6px 20px rgba(15, 23, 42, 0.06);
     --shadow-md: 0 18px 50px rgba(15, 23, 42, 0.1);
 }
-
-
-/* DASAR */
 
 * {
     box-sizing: border-box;
@@ -213,9 +208,6 @@ img {
     max-width: 100%;
 }
 
-
-/* KOMPONEN UMUM */
-
 .container {
     width: min(90%, 1200px);
     margin: 0 auto;
@@ -286,9 +278,6 @@ img {
     color: var(--teal);
 }
 
-
-/* NAVIGASI */
-
 .navbar {
     position: sticky;
     top: 0;
@@ -352,9 +341,6 @@ img {
     font-size: 27px;
 }
 
-
-/* HERO */
-
 .hero {
     position: relative;
     overflow: hidden;
@@ -416,9 +402,6 @@ img {
     color: var(--text-light);
     font-size: 13px;
 }
-
-
-/* CONTOH DASHBOARD */
 
 .hero-visual {
     position: relative;
@@ -591,9 +574,6 @@ img {
     font-size: 11px;
 }
 
-
-/* KEUNGGULAN */
-
 .value-section {
     padding: 105px 0;
     border-top: 1px solid var(--border);
@@ -642,9 +622,6 @@ img {
     font-size: 14px;
     line-height: 1.6;
 }
-
-
-/* ALASAN PATHLY DIBUTUHKAN */
 
 .impact-section {
     padding: 110px 0;
@@ -710,8 +687,6 @@ img {
     line-height: 1.65;
 }
 
-/* CARA KERJA */
-
 .how-section {
     padding: 110px 0;
     background: var(--mint);
@@ -762,9 +737,6 @@ img {
     margin: 7px 0 7px 27px;
     background: rgba(45, 140, 136, 0.25);
 }
-
-
-/* PILIHAN KARIER */
 
 .career-section {
     padding: 110px 0;
@@ -860,9 +832,6 @@ img {
     font-weight: 600;
 }
 
-
-/* FOOTER */
-
 .footer {
     padding: 46px 0;
     border-top: 1px solid var(--border);
@@ -906,9 +875,6 @@ img {
     color: var(--text-light);
     font-size: 11px;
 }
-
-
-/* ONBOARDING */
 
 .onboarding-page {
     background: var(--off-white);
@@ -979,9 +945,6 @@ img {
     font-size: 16px;
 }
 
-
-/* FORM PROFIL */
-
 .profile-form {
     padding: 40px;
     border: 1px solid var(--border);
@@ -1028,8 +991,6 @@ img {
     box-shadow: 0 0 0 3px rgba(45, 140, 136, 0.1);
 }
 
-
-/* PILIHAN PENDIDIKAN */
 
 .option-grid {
     display: grid;
@@ -1085,9 +1046,6 @@ img {
 .choice-card input:checked + .choice-content strong {
     color: var(--teal-dark);
 }
-
-
-/* PENGALAMAN */
 
 .experience-grid {
     display: grid;
@@ -1182,9 +1140,6 @@ img {
     font-size: 13px;
     font-weight: 700;
 }
-
-
-/* TAHAP KARIER */
 
 .career-stage-main {
     padding: 65px 0 100px;
@@ -1321,9 +1276,6 @@ img {
     gap: 15px;
 }
 
-
-/* HALAMAN PENGALIHAN */
-
 .route-main {
     display: flex;
     align-items: center;
@@ -1378,9 +1330,6 @@ img {
     gap: 12px;
 }
 
-
-/* TABLET */
-
 @media (max-width: 900px) {
     .hero {
         padding: 70px 0 90px;
@@ -1413,9 +1362,6 @@ img {
         gap: 10px;
     }
 }
-
-
-/* MENU DAN HP */
 
 @media (max-width: 720px) {
     .menu-button {
@@ -1522,9 +1468,6 @@ img {
     }
 }
 
-
-/* ONBOARDING HP */
-
 @media (max-width: 650px) {
     .onboarding-main {
         padding: 45px 0 75px;
@@ -1553,9 +1496,6 @@ img {
     }
 }
 
-
-/* TAHAP KARIER TABLET */
-
 @media (max-width: 850px) {
     .stage-grid {
         grid-template-columns: 1fr;
@@ -1569,9 +1509,6 @@ img {
         margin-bottom: 25px;
     }
 }
-
-
-/* TAHAP KARIER HP */
 
 @media (max-width: 600px) {
     .career-stage-main {
@@ -1595,9 +1532,6 @@ img {
         padding: 35px 23px;
     }
 }
-
-
-/* HP KECIL */
 
 @media (max-width: 440px) {
     .hero h1 {

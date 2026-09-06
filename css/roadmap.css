@@ -1,5 +1,3 @@
-/* HALAMAN UTAMA */
-
 .roadmap-page {
     background: var(--off-white);
 }
@@ -11,9 +9,6 @@
 .roadmap-container {
     max-width: 1050px;
 }
-
-
-/* HEADER */
 
 .roadmap-header {
     display: flex;
@@ -60,9 +55,6 @@
     font-size: 15px;
 }
 
-
-/* RINGKASAN */
-
 .roadmap-overview {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -90,9 +82,6 @@
     color: var(--navy);
     font-size: 17px;
 }
-
-
-/* AKSI SELANJUTNYA */
 
 .next-action-card {
     display: flex;
@@ -156,9 +145,6 @@
     font-size: 22px;
 }
 
-
-/* PEMBUKA ROADMAP */
-
 .roadmap-intro {
     max-width: 680px;
     margin-bottom: 30px;
@@ -174,9 +160,6 @@
     color: var(--text-gray);
     font-size: 14px;
 }
-
-
-/* DAFTAR ROADMAP */
 
 .roadmap-list {
     display: flex;
@@ -195,9 +178,6 @@
     background: var(--white);
     box-shadow: var(--shadow-sm);
 }
-
-
-/* PRIORITAS */
 
 .roadmap-priority {
     padding-right: 20px;
@@ -252,9 +232,6 @@
     background: var(--amber-light);
     color: var(--amber);
 }
-
-
-/* PELAJARI, TERAPKAN, BUKTIKAN */
 
 .roadmap-steps {
     display: grid;
@@ -327,9 +304,6 @@
     text-underline-offset: 3px;
 }
 
-
-/* BUKTI PORTOFOLIO */
-
 .evidence-booster {
     padding: 27px;
     margin-bottom: 18px;
@@ -349,9 +323,6 @@
     font-size: 13px;
 }
 
-
-/* CATATAN */
-
 .roadmap-note {
     padding: 18px;
     margin-bottom: 35px;
@@ -370,9 +341,6 @@
     color: var(--teal-dark);
     font-size: 11px;
 }
-
-
-/* TOMBOL DAN ERROR */
 
 .roadmap-actions {
     display: flex;
@@ -399,9 +367,6 @@
     color: var(--text-gray);
 }
 
-
-/* TABLET */
-
 @media (max-width: 900px) {
     .roadmap-header {
         flex-direction: column;
@@ -424,9 +389,6 @@
     }
 }
 
-
-/* TABLET KECIL */
-
 @media (max-width: 720px) {
     .roadmap-steps {
         grid-template-columns: 1fr;
@@ -436,9 +398,6 @@
         min-height: auto;
     }
 }
-
-
-/* HP */
 
 @media (max-width: 560px) {
     .roadmap-main {

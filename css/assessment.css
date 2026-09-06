@@ -10,8 +10,6 @@
     max-width: 1000px;
 }
 
-/* Bagian atas */
-
 .assessment-top {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -53,8 +51,6 @@
     font-size: 15px;
 }
 
-/* Progress */
-
 .question-progress {
     margin-bottom: 25px;
 }
@@ -83,8 +79,6 @@
     background: var(--teal);
     transition: width 0.3s;
 }
-
-/* Kartu asesmen */
 
 .assessment-card {
     padding: 40px;
@@ -132,8 +126,6 @@
     line-height: 1.65;
 }
 
-/* Bagian pertanyaan */
-
 .assessment-block {
     padding-bottom: 35px;
     margin-bottom: 32px;
@@ -165,8 +157,6 @@
     color: var(--text-light);
     font-size: 11px;
 }
-
-/* Pilihan level */
 
 .level-grid {
     display: grid;
@@ -238,8 +228,6 @@
     line-height: 1.5;
 }
 
-/* Pilihan bukti */
-
 .evidence-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -280,8 +268,6 @@
     color: var(--text-gray);
 }
 
-/* Pesan dan tombol */
-
 .assessment-message {
     display: none;
     padding: 12px 14px;
@@ -308,8 +294,6 @@
     opacity: 0.4;
     cursor: not-allowed;
 }
-
-/* Halaman selesai */
 
 .assessment-complete {
     display: none;
@@ -379,8 +363,6 @@
     font-size: 13px;
 }
 
-/* Tablet */
-
 @media (max-width: 850px) {
     .assessment-top {
         grid-template-columns: 1fr;
@@ -395,8 +377,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-/* Ponsel */
 
 @media (max-width: 580px) {
     .assessment-main {

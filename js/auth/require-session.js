@@ -29,6 +29,5 @@ export async function requireSession() {
   const destination = encodeURIComponent(getCurrentPage());
   window.location.replace(`login.html?next=${destination}`);
 
-  // Menahan pemuatan kode halaman selama browser berpindah ke halaman login.
-  return new Promise(() => {});
+   return new Promise(() => {});
 }

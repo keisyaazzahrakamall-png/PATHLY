@@ -67,9 +67,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
         confidence: "kepercayaan diri"
     };
 
-
-    /* INFORMASI DASAR */
-
     if (scoringResult) {
         readinessCareer.textContent =
             scoringResult.careerName;
@@ -80,9 +77,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
         readinessCareer.textContent = "Belum dipilih";
         readinessAlignment.textContent = "Tidak tersedia";
     }
-
-
-    /* KEJELASAN KARIER */
 
     function showCareerClarity() {
         if (!careerTarget || !scoringResult) {
@@ -120,9 +114,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
             `Setelah melakukan eksplorasi, kamu memilih ${careerName} untuk dikembangkan.`;
     }
 
-
-    /* CAKUPAN REFERENSI BUKTI */
-
     function showEvidenceCoverage() {
         if (!scoringResult) {
             evidenceStatus.textContent = "Tidak tersedia";
@@ -157,9 +148,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
             `${evidenceCount} dari ${totalSkills} keahlian memiliki referensi yang kamu catat. Pathly tidak memverifikasi referensi dan tidak memasukkannya ke skor.`;
     }
 
-
-    /* LABEL ADAPTABILITAS */
-
     function getReflectionLabel(value) {
         const score = Number(value);
         if (!Number.isFinite(score)) return "Belum diisi";
@@ -168,9 +156,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
         if (score < 3.5) return "Cukup konsisten";
         return "Konsisten";
     }
-
-
-    /* MENAMPILKAN HASIL ADAPTABILITAS */
 
     function showAdaptabilityResult(data) {
         dimensions.forEach(function (dimension) {
@@ -194,9 +179,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
 
         roadmapButton.disabled = false;
     }
-
-
-    /* MEMUAT JAWABAN LAMA */
 
     function loadSavedAdaptability() {
         const savedData = localStorage.getItem(
@@ -236,9 +218,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
             );
         }
     }
-
-
-    /* MENYIMPAN JAWABAN */
 
     if (adaptabilityForm) {
         const adaptabilitySubmitButton = adaptabilityForm.querySelector(
@@ -386,9 +365,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
         );
     }
 
-
-    /* TOMBOL ROADMAP */
-
     if (roadmapButton) {
         roadmapButton.addEventListener(
             "click",
@@ -400,9 +376,6 @@ import { saveReadinessRecord } from "./lib/user-data.js";
             }
         );
     }
-
-
-    /* MEMULAI HALAMAN */
 
     showCareerClarity();
     showEvidenceCoverage();
