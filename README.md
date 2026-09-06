@@ -12,9 +12,6 @@
 
 </div>
 
-> [!IMPORTANT]
-> Sebelum submission, lengkapi tautan live demo, URL repository, dan screenshot pada bagian yang sudah ditandai.
-
 ## Status Kesiapan Submission
 
 | Poin | Status | Bukti/Langkah |
@@ -26,8 +23,12 @@
 | Disclaimer refleksi non-CAAS | Selesai di repository | `readiness.html` dan bagian metode README |
 | Privasi dan peringatan data sensitif | Selesai di repository | `privacy.html` dan persetujuan pendaftaran |
 | Security headers Vercel | Selesai di repository | `vercel.json` |
-| Deploy, redirect Supabase, dan uji dua akun | Tindakan pemilik | `docs/PRODUCTION-CHECKLIST.md` |
-| Akun demo, screenshot production, dan URL README | Tindakan pemilik | Isi setelah deployment; jangan gunakan data pribadi |
+| Deployment Vercel dan URL production | Selesai | [Live demo Pathly](https://pathly-velora.vercel.app/) |
+| Redirect konfirmasi email dan reset password Supabase | Selesai | Domain production telah dikonfigurasi di Supabase |
+| Alur production satu akun hingga roadmap | Selesai | Pendaftaran, login, asesmen, hasil, refleksi, dan Jalur Saya telah diuji |
+| Screenshot production dan URL README | Selesai | Empat screenshot ditampilkan pada bagian demo |
+| Uji dua akun, persistensi progres, dan lupa password | Tindakan pemilik | Verifikasi akhir mengikuti `docs/PRODUCTION-CHECKLIST.md` |
+| Kredensial akun demo untuk juri | Tindakan pemilik | Berikan melalui kolom submission privat, bukan repository publik |
 | Uji 3–5 mahasiswa dan bukti dampak | Tindakan pemilik | Catat hasil nyata; jangan mengarang data pengujian |
 
 ## Daftar Isi
@@ -154,21 +155,19 @@ Empat dimensi refleksi—perhatian, kendali, rasa ingin tahu, dan kepercayaan di
 - **Repository GitHub:** [https://github.com/keisyaazzahrakamall-png/PATHLY](https://github.com/keisyaazzahrakamall-png/PATHLY)
 - **Video demo (opsional):** Belum tersedia.
 
-Sebelum submission, simpan screenshot di `docs/screenshots/`, lalu tampilkan pada bagian ini. Screenshot yang disarankan:
+### Akses Demo
 
-1. Landing page Pathly.
-2. Halaman asesmen keahlian dan referensi.
-3. Hasil kesesuaian serta prioritas kesenjangan.
-4. Roadmap atau halaman Jalur Saya.
+Juri dapat membuat akun baru melalui tombol **Mulai Jalur Saya** pada live demo. Akun demo juga dapat disiapkan untuk penilaian; email dan kata sandinya diberikan melalui kolom submission privat panitia agar kredensial tidak dipublikasikan di repository.
 
-Contoh penulisan setelah file screenshot tersedia:
+### Tampilan Aplikasi
 
-```md
 ![Landing Page Pathly](docs/screenshots/landing-page.png)
+
 ![Asesmen dan Referensi](docs/screenshots/asesmen-referensi.png)
+
 ![Hasil Kesiapan Karier](docs/screenshots/hasil-kesesuaian.png)
+
 ![Roadmap Personal](docs/screenshots/roadmap-jalur-saya.png)
-```
 
 ## Teknologi
 
